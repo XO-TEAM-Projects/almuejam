@@ -15,7 +15,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 26px;
+    margin: 0 clamp(12px, 4vw, 26px);
     font-family: Georgia, 'Times New Roman', Times, serif;
 
 }
@@ -53,24 +53,35 @@ nav ul li a:hover {
 
 /* header */
 
-.header_vector_background {
+.hero {
+    position: relative;
+    overflow: visible;
     height: 500px;
-    background: linear-gradient(0deg, #74787A, #74787A);
-    clip-path: polygon(0 0,
-
-            100% 0,
-
-            100% 30%,
-
-            0 100%);
-    z-index: -1;
+    padding-bottom: 40px;
 }
+
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    background: #74787A;
+    clip-path: polygon(0 0, 100% 0, 100% 30%, 0 100%);
+    z-index: 1;
+}
+
+.hero-layer {
+    position: relative;
+    height: 100%;
+    z-index: 2;
+}
+
+
 
 
 .header_text {
     position: absolute;
     left: 8%;
-    top: 35%;
+    top: 16%;
     max-width: 40%;
     color: #fff;
     z-index: 3;
@@ -80,7 +91,7 @@ nav ul li a:hover {
 
 /* WELCOME TO */
 .hero-subtitle {
-    font-family: Arial, sans-serif;
+
     font-size: 20px;
     font-weight: 700;
     letter-spacing: 2px;
@@ -91,7 +102,7 @@ nav ul li a:hover {
 /* Almujam Study House */
 .hero-title {
     position: relative;
-    font-size: 40px;
+    font-size: clamp(26px, 4vw, 40px);
     font-weight: 500;
     margin: 0 0 20px 0;
 }
@@ -124,10 +135,15 @@ nav ul li a:hover {
 
 /*description */
 .hero-description {
-    font-size: 26px;
+    font-size: clamp(18px, 2.5vw, 26px);
     line-height: 1.5;
     font-weight: 500;
 
+}
+
+svg {
+    width: 100%;
+    height: auto;
 }
 
 
@@ -146,13 +162,14 @@ nav ul li a:hover {
 
 .header_img {
     position: absolute;
-    right: 8%;
+    right: 10%;
     top: 10%;
-    max-width: 50%;
+    max-width: 45%;
     height: auto;
     z-index: 3;
 
 }
+
 
 .btn a {
     display: flex;
@@ -167,6 +184,7 @@ nav ul li a:hover {
     line-height: 30px;
     letter-spacing: 0%;
     margin-top: 20px;
+
 }
 
 .features {
@@ -451,5 +469,182 @@ nav ul li a:hover {
 
     .social-icons {
         justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+
+
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+
+
+    .header_text {
+
+        font-size: 20px;
+    }
+
+    .white-shape {
+        display: none;
+    }
+
+    .header_img {
+        top: 90%;
+        right: -4%;
+    }
+
+
+
+    .footer-container {
+        gap: 24px;
+        padding: 30px 16px;
+    }
+
+    .footer-section h3 {
+        font-size: 16px;
+    }
+
+    .footer-section p {
+        font-size: 13px;
+    }
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 480px) {
+
+    nav {
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 5px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+
+
+    svg {
+        display: none;
+    }
+
+    .white-shape {
+        display: none;
+    }
+
+    .header_img {
+        display: none;
+    }
+
+
+    .header_text {
+        left: 40%;
+        top: 10%;
+
+        transform: translateX(-50%);
+        max-width: 96%;
+        text-align: center;
+    }
+
+    .hero-subtitle {
+        font-size: 12px;
+    }
+
+    .hero-title {
+        font-size: 24px;
+    }
+
+    .hero-description {
+        font-size: 9px;
+        font-weight: 200;
+
+    }
+
+    .hero-title::before {
+        display: none;
+
+    }
+
+
+
+    .features {
+        gap: 10px;
+        margin: 40px 10px;
+    }
+
+    .feature {
+        min-width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .feature-text {
+        white-space: normal;
+    }
+
+    .main_text p {
+        font-size: 20px;
+        margin: 0;
+        padding: 12px 0;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .header_text {
+        max-width: 70%;
+        top: 30%;
+    }
+
+    .header_img {
+        max-width: 65%;
+        top: 15%;
+    }
+
+    .hero-description {
+        font-size: 22px;
+    }
+
+    .features {
+        justify-content: center;
+    }
+
+    .feature {
+        min-width: 300px;
+    }
+}
+
+@media (min-width: 1400px) {
+
+    .header_text {
+        max-width: 35%;
+    }
+
+    .features {
+        max-width: 1500px;
+    }
+
+    .cta-card {
+        max-width: 700px;
     }
 }
