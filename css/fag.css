@@ -52,6 +52,147 @@ nav ul li a:hover {
 }
 
 
+.title {
+    background: #fff7ed;
+    padding: 60px 40px;
+    text-align: center;
+    font-family: "Georgia", serif;
+}
+
+.title h2 {
+    color: #8b1e1e;
+    font-size: 40px;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #c14d4d;
+
+    font-size: 24px;
+}
+
+.faq {
+    max-width: 860px;
+    margin: 40px auto;
+    font-family: sans-serif;
+
+}
+
+.faq-item {
+    border: 1px solid #d8b7a6;
+    border-radius: 12px;
+    background: #fff6ee;
+    overflow: hidden;
+    margin-top: 20px;
+
+}
+
+.faq-question {
+    width: 100%;
+    background: transparent;
+    border: none;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #9b1c1c;
+    text-align: left;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 20px;
+}
+
+.faq-answer p {
+    margin: 15px 0;
+    color: #6b4b3e;
+    line-height: 1.6;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px;
+}
+
+.faq-item.active .icon {
+    transform: rotate(180deg);
+}
+
+.icon {
+    transition: transform 0.3s ease;
+}
+
+.faq-cta {
+    max-width: 600px;
+    margin: 60px auto;
+    padding: 40px 30px;
+    text-align: center;
+
+    background: #fff6ee;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.faq-cta h3 {
+    color: #9b1c1c;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.faq-cta p {
+    color: #6b4b3e;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 14px 26px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 10px;
+    text-decoration: none;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.btn.whatsapp {
+    background: #9fbc7a;
+    color: #ffffff;
+}
+
+.btn.contact {
+    background: #9fbc7a;
+    color: #ffffff;
+}
+
+
+
+
+
+
+
 
 
 

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="../css/homepage.css">
+    <link rel="stylesheet" href="../css/fag.css">
     <title>almuejam</title>
 </head>
 
@@ -26,6 +26,145 @@
         </ul>
     </nav>
 
+    <header>
+        <div class="title">
+            <h2>Frequently Asked Questions</h2>
+            <p class="subtitle">
+                Find answers to common questions about Almujam Study House
+            </p>
+        </div>
+    </header>
+
+    <div class="faq">
+
+        <div class="faq-item active">
+            <button class="faq-question">
+                Do I need to book in advance?
+                <span class="icon">⌄</span>
+            </button>
+            <div class="faq-answer">
+                <p>
+                    While walk-ins are welcome based on availability, we highly recommend
+                    booking in advance via WhatsApp to ensure you have a space reserved.
+                    This is especially important during peak study periods like exam seasons.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Are subscriptions available?
+                <span class="icon">⌄</span>
+            </button>
+            <div class="faq-answer">
+                <p>
+                    Yes, we offer flexible subscription plans tailored to different study needs.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Is the place suitable for groups?
+                <span class="icon">⌄</span>
+            </button>
+            <div class="faq-answer">
+                <p>
+                    Yes, we have dedicated spaces suitable for group study sessions.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                What is the room capacity?
+                <span class="icon">⌄</span>
+            </button>
+            <div class="faq-answer">
+                <p>
+                    Room capacity varies depending on the area, with options for individuals and groups.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Is Wi-Fi available?
+                <span class="icon">⌄</span>
+            </button>
+            <div class="faq-answer">
+                <p>
+                    Yes, high-speed Wi-Fi is available throughout the study house.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                What are your operating hours?
+                <span class="icon">⌄</span>
+            </button>
+            <div class="faq-answer">
+                <p>
+                    We are open daily with extended hours during exam periods.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Can I bring my own food and drinks?
+                <span class="icon">⌄</span>
+            </button>
+            <div class="faq-answer">
+                <p>
+                    Light snacks and drinks are allowed in designated areas.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Where are you located?
+                <span class="icon">⌄</span>
+            </button>
+            <div class="faq-answer">
+                <p>
+                    We are conveniently located in a central area, easily accessible by public transport.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                What payment methods do you accept?
+                <span class="icon">⌄</span>
+            </button>
+            <div class="faq-answer">
+                <p>
+                    We accept cash and major electronic payment methods.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="faq-cta">
+        <h3>Still have questions?</h3>
+        <p>
+            Feel free to reach out to us via WhatsApp or visit our contact page
+        </p>
+
+        <div class="cta-buttons">
+            <a href="#" class="btn whatsapp">
+                <span>WhatsApp Booking</span>
+            </a>
+
+            <a href="/contact" class="btn contact">
+                <span>Contact Us</span>
+            </a>
+        </div>
+    </div>
 
 
 
@@ -90,6 +229,15 @@
             © 2026 Almujam Study House. All rights reserved.
         </div>
     </footer>
+
+    <script>
+        document.querySelectorAll(".faq-question").forEach(button => {
+            button.addEventListener("click", () => {
+                const item = button.parentElement;
+                item.classList.toggle("active");
+            });
+        });
+    </script>
 
 </body>
 
