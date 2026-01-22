@@ -74,7 +74,7 @@ nav ul li a:hover {
 }
 
 .menu-container {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: auto;
     display: grid;
     grid-template-columns: 1.2fr 1fr;
