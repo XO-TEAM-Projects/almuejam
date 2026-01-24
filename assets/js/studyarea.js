@@ -1,14 +1,14 @@
 const images = [
-    "../img/slide-1.png",
-    "../img/slide-2.png",
-    "../img/slide-3.png",
-    "../img/slide-4.png",
-    "../img/slide-5.png",
-    "../img/slide-6.png",
-    "../img/slide-7.png",
-    "../img/slide-8.png",
-    "../img/slide-9.png",
-    "../img/slide-10.png",
+    "../assets/img/slide-1.png",
+    "../assets/img/slide-2.png",
+    "../assets/img/slide-3.png",
+    "../assets/img/slide-4.png",
+    "../assets/img/slide-5.png",
+    "../assets/img/slide-6.png",
+    "../assets/img/slide-7.png",
+    "../assets/img/slide-8.png",
+    "../assets/img/slide-9.png",
+    "../assets/img/slide-10.png",
 ];
 
 let currentIndex = 0;

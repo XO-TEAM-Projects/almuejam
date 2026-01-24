@@ -41,6 +41,7 @@ nav ul li a {
     text-decoration: none;
     color: rgba(53, 11, 11, 1);
     font-weight: 400;
+    transition: ease-out 0.5s;
 }
 
 nav ul li a:hover {

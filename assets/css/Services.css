@@ -41,6 +41,7 @@ nav ul li a {
     text-decoration: none;
     color: rgba(53, 11, 11, 1);
     font-weight: 400;
+    transition: ease-out 0.5s;
 }
 
 nav ul li a:hover {
@@ -171,7 +172,10 @@ nav ul li a:hover {
     font-weight: bold;
 }
 
+#card-style {
 
+    margin-top: 40px;
+}
 
 
 
@@ -321,6 +325,10 @@ nav ul li a:hover {
     .social-icons {
         justify-content: center;
     }
+
+
+
+
 }
 
 
@@ -337,6 +345,10 @@ nav ul li a:hover {
         gap: 1rem;
     }
 
+
+    .card {
+        margin: 20px 0;
+    }
 
 
 }
@@ -358,7 +370,9 @@ nav ul li a:hover {
         gap: 1rem;
     }
 
-
+    .card {
+        margin: 20px 0;
+    }
 
     .footer-container {
         gap: 24px;
@@ -371,5 +385,157 @@ nav ul li a:hover {
 
     .footer-section p {
         font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .icon {
+        top: 135px;
+        width: 56px;
+        height: 56px;
+    }
+
+    .card h3 {
+        font-size: 16px;
+    }
+
+    .card p {
+        font-size: 13px;
+    }
+
+    /* .cta {
+        text-align: center;
+    }
+
+    .btn {
+        width: 50%;
+        max-width: 260px;
+    } */
+}
+
+@media (min-width: 1600px) {
+    .grid {
+        max-width: 1600px;
+        gap: 36px;
+    }
+
+    .card {
+        padding: 22px;
+    }
+}
+
+
+/* ================= VERY SMALL SCREENS (300px) ================= */
+@media (max-width: 300px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    /* NAV */
+    nav {
+        gap: 8px;
+    }
+
+    nav img {
+        width: 80px;
+    }
+
+    nav ul {
+        gap: 8px;
+    }
+
+    nav ul li a {
+        font-size: 12px;
+        padding: 6px 8px;
+    }
+
+    /* SERVICES */
+    .services {
+        padding: 35px 12px;
+    }
+
+    .services h2 {
+        font-size: 22px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+
+    /* CARDS */
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .card {
+        padding: 14px;
+    }
+
+    .card img {
+        height: 140px;
+    }
+
+    .icon {
+        width: 50px;
+        height: 50px;
+        top: 120px;
+    }
+
+    .icon i {
+        font-size: 16px;
+    }
+
+    .card h3 {
+        font-size: 15px;
+        margin-top: 40px;
+    }
+
+    .card p {
+        font-size: 12px;
+    }
+
+    /* CTA */
+    .cta {
+        margin-top: 45px;
+        padding: 20px;
+    }
+
+    .cta h4 {
+        font-size: 16px;
+    }
+
+    .cta p {
+        font-size: 13px;
+    }
+
+    .btn {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    /* FOOTER */
+    .footer-container {
+        padding: 25px 12px;
+        gap: 22px;
+    }
+
+    .footer-section h3 {
+        font-size: 15px;
+    }
+
+    .footer-section p,
+    .contact-list li {
+        font-size: 12px;
     }
 }
