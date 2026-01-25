@@ -1,54 +1,69 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 
 body {
     background-color: rgba(255, 249, 240, 1);
     font-family: "Georgia", serif;
+    overflow-x: hidden;
 }
 
 
-nav {
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 clamp(12px, 4vw, 26px);
+    padding: 0 24px;
     font-family: Georgia, 'Times New Roman', Times, serif;
-
 }
 
-nav img {
+
+
+.logo {
     width: 100px;
-    height: auto;
 }
 
-nav ul {
+.nav-links {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     gap: 2.5rem;
-
 }
 
-nav ul li {
+.nav-links li {
     list-style: none;
-
 }
 
-nav ul li a {
+.nav-links a {
     text-decoration: none;
     color: rgba(53, 11, 11, 1);
-    font-weight: 400;
-    transition: ease-out 0.5s;
+    padding: 8px 12px;
+    transition: 0.3s;
 }
 
-nav ul li a:hover {
+.nav-links a:hover {
     background-color: rgba(155, 31, 33, 1);
     color: rgba(255, 249, 240, 1);
-    border-radius: 24px;
-    padding: 12px;
+    border-radius: 20px;
+}
+
+.nav-links .close-btn {
+    display: none;
+    width: 100%;
+    text-align: right;
+    padding: 20px 30px 0 0;
+}
+
+.nav-links .close-btn span {
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.menu-btn {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
 }
 
 
@@ -425,41 +440,49 @@ nav ul li a:hover {
 }
 
 
+
+
 @media (max-width: 768px) {
-    nav {
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 260px;
+        height: 100vh;
+
+        background: #fff9f0;
         flex-direction: column;
-        gap: 12px;
-        margin-bottom: 5px;
+        align-items: flex-start;
+
+        padding: 20px;
+        gap: 1.5rem;
+
+        transition: right 0.3s ease;
+        z-index: 999;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+
     }
 
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1rem;
+    .nav-links.show {
+        right: 0;
     }
 
-
-
+    .nav-links .close-btn {
+        display: block;
+        width: 100%;
+        text-align: right;
+    }
 }
 
 
+
 @media (max-width: 600px) {
-
-
-
-    nav {
-        flex-direction: column;
-        gap: 10px;
-        margin-bottom: 30px;
-    }
-
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1rem;
-    }
-
-
 
     .footer-container {
         gap: 24px;

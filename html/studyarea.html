@@ -12,18 +12,24 @@
 
 <body>
     <!-- nav bar -->
-    <nav>
-        <img src="../assets/img/logo.png" alt="almuejam logo">
-        <ul>
+    <nav class="navbar">
+
+        <img src="/assets/img/logo.png" class="logo" alt="almuejam logo">
+        <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+        <ul class="nav-links" id="navLinks">
+            <li class="close-btn"><span onclick="toggleMenu()">✖</span></li>
+
             <li><a href="../index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="studyarea.html">Study area</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="Services.html">Services</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="menu.html">Menu</a></li>
+            <li><a href="/html/about.html">About</a></li>
+            <li><a href="/html/studyarea.html">Study area</a></li>
+            <li><a href="/html/gallery.html">Gallery</a></li>
+            <li><a href="/html/Services.html">Services</a></li>
+            <li><a href="/html/faq.html">FAQ</a></li>
+            <li><a href="/html/contact.html">Contact</a></li>
+            <li><a href="/html/menu.html">Menu</a></li>
         </ul>
+
     </nav>
 
 
@@ -135,7 +141,11 @@
             © 2026 Almujam Study House. All rights reserved.
         </div>
     </footer>
-
+    <script>
+        function toggleMenu() {
+            document.getElementById("navLinks").classList.toggle("show");
+        }
+    </script>
 </body>
 
 </html>

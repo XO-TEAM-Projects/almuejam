@@ -12,18 +12,24 @@
 
 <body>
     <!-- nav bar -->
-    <nav>
-        <img src="../assets/img/logo.png" alt="almuejam logo">
-        <ul>
+    <nav class="navbar">
+
+        <img src="/assets/img/logo.png" class="logo" alt="almuejam logo">
+        <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+        <ul class="nav-links" id="navLinks">
+            <li class="close-btn"><span onclick="toggleMenu()">✖</span></li>
+
             <li><a href="../index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="studyarea.html">Study area</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="Services.html">Services</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="menu.html">Menu</a></li>
+            <li><a href="/html/about.html">About</a></li>
+            <li><a href="/html/studyarea.html">Study area</a></li>
+            <li><a href="/html/gallery.html">Gallery</a></li>
+            <li><a href="/html/Services.html">Services</a></li>
+            <li><a href="/html/faq.html">FAQ</a></li>
+            <li><a href="/html/contact.html">Contact</a></li>
+            <li><a href="/html/menu.html">Menu</a></li>
         </ul>
+
     </nav>
 
     <header>
@@ -160,15 +166,11 @@
                 <span>WhatsApp Booking</span>
             </a>
 
-            <a href="https://www.instagram.com/almujam_study_house/" class="btn contact">
+            <a href="tel:+962791455403" class="btn contact">
                 <span>Contact Us</span>
             </a>
         </div>
     </div>
-
-
-
-
 
 
 
@@ -236,6 +238,12 @@
                 item.classList.toggle("active");
             });
         });
+
+
+        function toggleMenu() {
+            document.getElementById("navLinks").classList.toggle("show");
+        }
+
     </script>
 
 </body>
