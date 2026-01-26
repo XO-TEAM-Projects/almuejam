@@ -1,9 +1,11 @@
+/* =================================================
+   RESET
+================================================= */
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
-
 
 body {
     background-color: rgba(255, 249, 240, 1);
@@ -11,6 +13,9 @@ body {
     overflow-x: hidden;
 }
 
+/* =================================================
+   NAVBAR
+================================================= */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -19,14 +24,13 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-
 .logo {
     width: 100px;
 }
 
 .nav-links {
     display: flex;
-    gap: 2.5rem;
+    gap: 1.6rem;
 }
 
 .nav-links li {
@@ -46,6 +50,12 @@ body {
     border-radius: 20px;
 }
 
+.menu-btn {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
 .nav-links .close-btn {
     display: none;
     width: 100%;
@@ -58,23 +68,14 @@ body {
     cursor: pointer;
 }
 
-.menu-btn {
-    display: none;
-    font-size: 28px;
-    cursor: pointer;
-}
-
-
-
-/* header */
-
+/* =================================================
+   HERO
+================================================= */
 .hero {
     position: relative;
-    overflow: visible;
     height: 500px;
     padding-bottom: 40px;
 }
-
 
 .hero-bg {
     position: absolute;
@@ -90,9 +91,6 @@ body {
     z-index: 2;
 }
 
-
-
-
 .header_text {
     position: absolute;
     left: 8%;
@@ -104,24 +102,30 @@ body {
 
 
 
-/* WELCOME TO */
 .hero-subtitle {
-
-    font-size: 20px;
+    font-size: clamp(16px, 2.2vw, 20px);
     font-weight: 700;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     color: #e6de7a;
-    margin: 0 0 10px 0;
+    margin-bottom: 14px;
 }
 
-/* Almujam Study House */
+
+.hero-description {
+    font-size: clamp(16px, 2.6vw, 20px);
+    line-height: 1.7;
+    font-weight: 400;
+    max-width: 520px;
+    margin: 0 auto;
+}
+
 .hero-title {
     position: relative;
-    font-size: clamp(26px, 4vw, 40px);
+    font-size: clamp(30px, 5vw, 44px);
     font-weight: 500;
-    margin: 0 0 20px 0;
+    line-height: 1.2;
+    margin-bottom: 22px;
 }
-
 
 .hero-title::before {
     content: "";
@@ -133,43 +137,28 @@ body {
     height: 140%;
     border-radius: 30px;
     background:
-        radial-gradient(circle at 20% 40%, rgba(230, 222, 122, 0.9) 0.6px, transparent 0.7px),
-        radial-gradient(circle at 60% 30%, rgba(230, 222, 122, 0.7) 0.5px, transparent 0.6px),
-        radial-gradient(circle at 80% 60%, rgba(230, 222, 122, 0.8) 0.6px, transparent 0.7px),
-        radial-gradient(circle at 30% 70%, rgba(230, 222, 122, 0.6) 0.5px, transparent 0.6px),
-        radial-gradient(circle at 50% 50%, rgba(230, 222, 122, 0.9) 0.6px, transparent 0.7px);
-
+        radial-gradient(circle at 20% 40%, rgba(230, 222, 122, .9) .6px, transparent .7px),
+        radial-gradient(circle at 60% 30%, rgba(230, 222, 122, .7) .5px, transparent .6px),
+        radial-gradient(circle at 80% 60%, rgba(230, 222, 122, .8) .6px, transparent .7px),
+        radial-gradient(circle at 30% 70%, rgba(230, 222, 122, .6) .5px, transparent .6px),
+        radial-gradient(circle at 50% 50%, rgba(230, 222, 122, .9) .6px, transparent .7px);
     background-size: 18px 18px;
-    background-repeat: repeat;
-
-    filter: blur(0.6px);
-    opacity: 1.95;
-
+    filter: blur(.6px);
     z-index: -1;
 }
 
-/*description */
-.hero-description {
-    font-size: clamp(18px, 2.5vw, 26px);
-    line-height: 1.5;
-    font-weight: 500;
-
-}
-
+/* Decorations */
 svg {
     width: 100%;
     height: auto;
 }
 
-
 .white-shape {
     position: absolute;
     right: 8%;
     top: 30%;
-
     width: 50%;
     height: 70%;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -180,61 +169,51 @@ svg {
     right: 10%;
     top: 10%;
     max-width: 43%;
-    height: auto;
     z-index: 3;
-
 }
 
-
+/* =================================================
+   BUTTON
+================================================= */
 .btn a {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
     text-decoration: none;
     color: rgba(155, 31, 33, 1);
-    font-weight: 500;
-    font-style: Bold;
     font-size: 40px;
-    line-height: 30px;
-    letter-spacing: 0%;
+    font-weight: 500;
     margin-top: 20px;
-
 }
 
+/* =================================================
+   FEATURES
+================================================= */
 .features {
     display: flex;
     flex-wrap: wrap;
     gap: 14px;
     justify-content: center;
     max-width: 1300px;
-    margin: 60px auto;
-
-
+    margin: 60px 20px;
 }
 
 .feature {
     display: flex;
     align-items: center;
-
     height: 60px;
     padding: 0 24px;
     min-width: 360px;
-
     border-radius: 10px;
-    color: #ffffff;
-
-    box-sizing: border-box;
-
-
+    color: #fff;
 }
 
 .feature-red {
-    background-color: #9e1b1b;
+    background: #9e1b1b;
 }
 
 .feature-gray {
-    background-color: #8f8f8f;
+    background: #8f8f8f;
 }
 
 .feature-icon {
@@ -245,16 +224,17 @@ svg {
 .feature-text {
     font-size: 18px;
     font-weight: 500;
-    text-wrap: wrap;
     white-space: nowrap;
 }
 
+/* =================================================
+   MAIN TEXT
+================================================= */
 .main_text {
     text-align: center;
-    margin-top: 80px;
-    margin: 0 40px;
+    margin: 80px 20px;
     font-size: 24px;
-    padding: 20px;
+    padding: 10px;
 }
 
 .main_text h2 {
@@ -265,11 +245,11 @@ svg {
 .main_text p {
     padding: 16px;
     color: rgba(91, 94, 96, 1);
-
 }
 
-
-/*  Wrapper Background */
+/* =================================================
+   CTA
+================================================= */
 .cta-wrapper {
     background-color: #fff7ec;
     padding: 20px;
@@ -277,7 +257,6 @@ svg {
     justify-content: center;
 }
 
-/*   Card */
 .cta-card {
     background-color: #fff7ec;
     border-radius: 12px;
@@ -326,34 +305,24 @@ svg {
     transform: translateY(-1px);
 }
 
-
-
-
-
-/* 
-   Footer Base
- */
+/* =================================================
+   FOOTER
+================================================= */
 .footer {
     background-color: #3f3f3f;
     color: #eaeaea;
     font-family: "Segoe UI", Tahoma, sans-serif;
 }
 
-/* 
-   Layout
- */
 .footer-container {
     max-width: 1500px;
-    margin: 0 auto;
+    margin: auto;
     padding: 40px 20px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
 }
 
-/* 
-   Headings
-*/
 .footer-section h3 {
     color: #d6cf6a;
     font-size: 18px;
@@ -453,221 +422,15 @@ svg {
     color: #ccc;
 }
 
-/* 
-   Responsive
- */
-@media (max-width: 914px) {
+/* =================================================
+   RESPONSIVE (CLEAN)
+================================================= */
 
-    .nav-links {
-        display: flex;
-        gap: 1.3rem;
-    }
+/* ---------- Medium Screens (900px fix) ---------- */
 
 
-    .header_text {
-        max-width: 70%;
-        top: 30%;
 
-    }
-
-    .header_img {
-        margin-top: 34px;
-        max-width: 40%;
-        top: 15%;
-
-    }
-
-
-    .white-shape {
-
-
-        right: -5px;
-    }
-
-
-    .footer-container {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .footer-section p {
-        margin: 0 auto;
-    }
-
-    .contact-list li {
-        justify-content: center;
-    }
-
-    .social-icons {
-        justify-content: center;
-    }
-}
-
-@media (max-width: 650px) {
-
-
-    .cta-card {
-        padding: 25px 20px;
-    }
-
-    .cta-card h2 {
-        font-size: 20px;
-    }
-
-
-    .header_text {
-
-        font-size: 20px;
-    }
-
-    .hero-bg {
-        position: absolute;
-        background: #74787A;
-        clip-path: none;
-        margin-bottom: 30px;
-        z-index: 1;
-    }
-
-    svg {
-        display: none;
-    }
-
-    .white-shape {
-        display: none;
-    }
-
-    .header_img {
-        display: none;
-    }
-
-
-
-    .footer-container {
-        gap: 24px;
-        padding: 30px 16px;
-    }
-
-    .footer-section h3 {
-        font-size: 16px;
-    }
-
-    .footer-section p {
-        font-size: 13px;
-    }
-}
-
-
-
-
-
-
-
-
-
-@media (max-width: 480px) {
-
-
-    .btn a {
-        font-size: 26px;
-        margin: 40px 0;
-
-    }
-
-    .main_text {
-
-        margin-top: 40px;
-        margin: 0 30px;
-        font-size: 16px;
-        padding: 20px;
-    }
-
-    .main_text h2 {
-        font-weight: 300;
-        margin-bottom: 30px;
-    }
-
-    .main_text p {
-        padding: 2px;
-        color: rgba(91, 94, 96, 1);
-
-    }
-
-
-
-
-    .hero-bg {
-        position: absolute;
-        background: #74787A;
-        clip-path: none;
-        margin-bottom: 30px;
-        z-index: 1;
-    }
-
-    svg {
-        display: none;
-    }
-
-    .white-shape {
-        display: none;
-    }
-
-    .header_img {
-        display: none;
-    }
-
-
-    .header_text {
-        left: 40%;
-        top: 15%;
-        font-size: 20px;
-        transform: translateX(-50%);
-        max-width: 90%;
-        text-align: center;
-        width: 100%;
-    }
-
-    .hero-subtitle {
-        font-size: 19px;
-        text-align: center;
-    }
-
-    .hero-title {
-        font-size: 29px;
-        text-align: center;
-    }
-
-    .hero-description {
-        font-size: 9px;
-        font-weight: 200;
-
-    }
-
-
-    .features {
-        gap: 10px;
-        margin: 40px 10px;
-    }
-
-    .feature {
-        min-width: 100%;
-        justify-content: center;
-        text-align: center;
-    }
-
-    .feature-text {
-        white-space: normal;
-    }
-
-}
-
-
-
-
-
-
-
-
-@media (max-width: 768px) {
+@media (max-width: 900px) {
 
     .menu-btn {
         display: block;
@@ -679,19 +442,15 @@ svg {
         right: -100%;
         width: 260px;
         height: 100vh;
-
         background: #fff9f0;
+
         flex-direction: column;
         align-items: flex-start;
-
         padding: 20px;
-        gap: 1.3rem;
+        gap: 1.4rem;
 
         transition: right 0.3s ease;
         z-index: 999;
-        overflow-y: auto;
-        -webkit-overflow-scrolling: touch;
-
     }
 
     .nav-links.show {
@@ -705,52 +464,111 @@ svg {
     }
 
 
-
+    /* HERO TEXT */
     .header_text {
-        max-width: 70%;
-        top: 30%;
-
+        max-width: 55%;
+        left: 6%;
+        top: 14%;
     }
 
-    .header_img {
-        margin-top: 34px;
-        max-width: 40%;
-        top: 15%;
-
-    }
-
-
-    .white-shape {
-
-
-        right: -5px;
+    .hero-title {
+        font-size: clamp(28px, 3.6vw, 36px);
     }
 
     .hero-description {
         font-size: 22px;
-        margin: 0;
     }
 
-    .features {
-        justify-content: center;
+    /* IMAGE */
+    .header_img {
+        max-width: 38%;
+        right: 10%;
+        top: 24%;
     }
 
+    /* WHITE SHAPE */
+    .white-shape {
+        width: 46%;
+        height: 65%;
+        right: 4%;
+        top: 32%;
+    }
+
+    /* FEATURES */
     .feature {
-        min-width: 300px;
+        min-width: 320px;
     }
 }
 
-@media (min-width: 1400px) {
+@media (max-width: 768px) {
+
+
+
+    /* hero simplify */
+    .hero {
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+
+    .hero-bg {
+        clip-path: none;
+    }
+
+    svg,
+    .white-shape,
+    .header_img {
+        display: none;
+    }
 
     .header_text {
-        max-width: 35%;
+        position: relative;
+        left: auto;
+        top: auto;
+        margin: 0 auto;
+        max-width: 80%;
+        text-align: center;
+        padding-top: 80px;
     }
 
-    .features {
-        max-width: 1500px;
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
     }
 
-    .cta-card {
-        max-width: 700px;
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .btn a {
+        font-size: 26px;
+        margin: 40px 0;
+    }
+
+    .hero {
+        height: auto;
+        padding-bottom: 10px;
+    }
+
+    .main_text h2 {
+        font-size: 26px;
+    }
+
+    .main_text p {
+        font-size: 18px;
+
+    }
+
+    .feature {
+        min-width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .feature-text {
+        white-space: normal;
     }
 }
