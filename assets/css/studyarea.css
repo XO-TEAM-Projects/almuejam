@@ -11,6 +11,9 @@ body {
 }
 
 
+/* =================================================
+   NAVBAR
+================================================= */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -19,15 +22,13 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-
-
 .logo {
     width: 100px;
 }
 
 .nav-links {
     display: flex;
-    gap: 2.5rem;
+    gap: 1.6rem;
 }
 
 .nav-links li {
@@ -47,6 +48,12 @@ body {
     border-radius: 20px;
 }
 
+.menu-btn {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
 .nav-links .close-btn {
     display: none;
     width: 100%;
@@ -55,12 +62,6 @@ body {
 }
 
 .nav-links .close-btn span {
-    font-size: 28px;
-    cursor: pointer;
-}
-
-.menu-btn {
-    display: none;
     font-size: 28px;
     cursor: pointer;
 }
@@ -325,7 +326,7 @@ body {
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
 
     .menu-btn {
         display: block;
@@ -337,45 +338,36 @@ body {
         right: -100%;
         width: 260px;
         height: 100vh;
-
-        background-color: rgba(255, 249, 240, 1);
-        box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
+        background: #fff9f0;
 
         flex-direction: column;
-        justify-content: flex-start;
         align-items: flex-start;
+        padding: 20px;
+        gap: 1.4rem;
 
-        padding: 20px 30px;
-        gap: 1.5rem;
-
-        transition: right 0.35s ease;
+        transition: right 0.3s ease;
         z-index: 999;
-
-        overflow-y: auto;
     }
 
     .nav-links.show {
         right: 0;
     }
 
-
-
-    .nav-links a {
-        font-size: 18px;
-        width: 100%;
-    }
-
-    .nav-left {
-        gap: 100px;
-    }
-
     .nav-links .close-btn {
         display: block;
+        width: 100%;
+        text-align: right;
     }
 
 
-}
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
+    .slider {
+        width: 350px;
+    }
+}
 
 
 @media (max-width: 600px) {
@@ -468,23 +460,6 @@ body {
     }
 }
 
-@media (max-width: 900px) {
-
-    .nav-links {
-        display: flex;
-        gap: 1.3rem;
-    }
-
-
-
-    .features {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .slider {
-        width: 350px;
-    }
-}
 
 @media (max-width: 370px) {
 
