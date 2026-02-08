@@ -87,8 +87,8 @@ body {
 }
 
 .faq {
-    max-width: 860px;
-    margin: 40px 20px;
+    max-width: 1260px;
+    margin: 40px 100px;
     font-family: sans-serif;
 
 }
@@ -337,6 +337,9 @@ body {
 
 
 @media (max-width: 900px) {
+    .faq{
+        margin: 20px;
+    }
     .menu-btn {
         display: block;
     }
@@ -396,6 +399,9 @@ body {
 
 
 @media (max-width: 600px) {
+    .faq{
+        margin: 20px;
+    }
 
 
     .footer-container {
